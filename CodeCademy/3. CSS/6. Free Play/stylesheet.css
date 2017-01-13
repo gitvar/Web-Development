@@ -1,0 +1,50 @@
+/*Write your CSS below!*/
+h1 {
+    color: #E61E1E; /* A nice vivid red
+    /*color: pink;*/
+    font-family: "Palatino Linotype", "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+h2 {
+    color: blue;
+    font-family: Verdana;
+  	font-weight: bold;
+  	text-align: left;
+  	padding-top: 25px;
+  	padding-bottom: 25px;
+}
+
+/*p {
+    font-size:44px;
+    color: orange;
+    font-family: sans-serif;
+}*/
+
+span {
+    font-size:2em;
+    color: #2BB027; /* A nice green */
+    font-family: "Comic Sans MS";
+}
+
+#par_1 {
+  position: relative;
+	top: -10px;
+	background-color: #DCDEDC;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+  font-size:1em;
+  color: #661DC4;
+  font-family: sans-serif;
+}
+
+#par_2 {
+  position: relative;
+	top: -10px;
+	background-color: #EBEDD8;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}

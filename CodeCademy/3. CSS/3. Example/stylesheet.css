@@ -1,0 +1,19 @@
+h1 {
+    font-family:Verdana;
+    /* Check the Hexadecimal Value of the color at http://www.hexcolortool.com/#fa1919 */
+    color: #e42f2f;
+}
+
+h3 {
+    font-family:Courier;
+    /* Check the Hexadecimal Value of the color at
+    http://www.colorpicker.com/ */
+	  color: #1968E6;
+}
+
+p {
+    /*color:purple;*/
+    color: #6842DB;
+    /* em is relative - 1em = default font size for relevant screen. */
+    font-size:1.5em
+}

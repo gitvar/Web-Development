@@ -1,0 +1,17 @@
+a:hover {
+    text-decoration: none;
+    color: pink;
+}
+
+.link_1 {
+    color: black;
+    font-family: cursive;
+}
+
+.link_2 {
+    color: red;
+}
+
+.link_3 {
+    color: green
+}

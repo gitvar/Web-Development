@@ -1,50 +1,176 @@
 /*Write your CSS below!*/
+
+/* HTML Element == CSS Selector */
+
+/*
+selector {
+    property: value;
+}*/
+
+* { /* Every HTML element will now have a solid 1px thick border! */
+    border: 1px #3a5fcd solid
+}
+
+body {
+  background-color: #C6E2FF;
+}
+
 h1 {
-    color: #E61E1E; /* A nice vivid red
-    /*color: pink;*/
+    color: #E61E1E;
+    /* A nice vivid red */
     font-family: "Palatino Linotype", "Times New Roman", Times, serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+h2 {
+    color: blue;
+    font-size: 2em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
     text-align: left;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-h2 {
-    color: blue;
-    font-family: Verdana;
-  	font-weight: bold;
-  	text-align: left;
-  	padding-top: 25px;
-  	padding-bottom: 25px;
+h3 {
+    color: green;
+    font-size: 1.5em;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-/*p {
-    font-size:44px;
-    color: orange;
-    font-family: sans-serif;
-}*/
-
 span {
-    font-size:2em;
-    color: #2BB027; /* A nice green */
+    font-size: 2em;
+    color: #2BB027;
+    /* A nice green */
     font-family: "Comic Sans MS";
 }
 
 #par_1 {
-  position: relative;
-	top: -10px;
-	background-color: #DCDEDC;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-  font-size:1em;
-  color: #661DC4;
-  font-family: sans-serif;
+    position: relative;
+    top: -15px;
+    background-color: #DCDEDC;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 1em;
+    /*color: #661DC4;
+  font-family: sans-serif;*/
 }
 
 #par_2 {
-  position: relative;
-	top: -10px;
-	background-color: #EBEDD8;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+    position: relative;
+    top: -15px;
+    background-color: #EBEDD8;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#par_3 {
+    position: relative;
+    top: -15px;
+    background-color: #91DFEB;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#p1 {
+    font-size: 1.2em;
+    color: pink;
+    /* This will not have an effect. Not sure why? */
+    font-family: Impact;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Impact;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border: 2px solid #4682b4;
+}
+
+th {
+    font-family: Verdana;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #084D3D;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+td {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1em;
+    height: 1em;
+    width: 1em;
+    padding: 5px;
+    color: #55A392;
+    border: 1px solid black;
+}
+
+#tr_1 {
+    border-bottom: 1px solid black;
+}
+
+#th_1 {
+    border-right: 1px solid black;
+    text-align: left;
+}
+
+#KK {
+    text-align: center;
+    color: black;
+}
+
+#td_1 {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#td_2 {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#td_3 {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+    color: red;
+}
+
+#par_4 {
+    background-color: #cc0000;
+    height: 100px;
+    width: 100px;
+}
+
+#par_4 {
+    height: 65px;
+    width: 125px;
+    border-color: #6495ED;
+    background-color: #BCD2EE;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+/*#a_1 {*/
+div a {
+    text-decoration: none;
+    color: red;
+    font-family: Verdana;
+    font-weight: bold;
 }

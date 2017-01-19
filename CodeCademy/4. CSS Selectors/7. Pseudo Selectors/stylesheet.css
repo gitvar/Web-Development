@@ -1,0 +1,20 @@
+/* Pseudo Selectors:
+
+A pseudo-class selector is a way of accessing HTML items that aren't part of the document tree (remember the tree structure we talked about earlier?). For instance, it's very easy to see where a link is in the tree. But where would you find information about whether a link had been clicked on or not? It isn't there!
+
+Pseudo-class selectors let us style these kinds of changes in our HTML document. For example, we saw we could change a link's text-decoration property to make it something other than blue and underlined. Using pseudo selectors, you can control the appearance of unvisited and visited links—even links the user is hovering over but hasn't clicked!
+
+The CSS syntax for pseudo selectors is
+
+selector:pseudo-class_selector {
+    property: value;
+}
+
+It's just that little extra colon (:).
+*/
+
+a:hover {
+    color: #17CF2F;
+    font-weight: bold;
+    text-decoration: none;
+}

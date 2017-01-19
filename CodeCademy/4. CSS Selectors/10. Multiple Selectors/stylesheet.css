@@ -1,0 +1,45 @@
+/* Multiple Selectors:
+
+Give the paragraphs inside the list item tags a font size of 30px. */
+
+p:nth-child(4) {
+    font-size: 26px;
+}
+
+
+/* Does NOT affect the color!??? *? */
+
+
+/*p:nth-child(5) {*/
+
+
+/* DOES affects the color */
+
+body>div>p>a {
+    font-size: 28px;
+    font-family: Garamund, serif;
+    color: green;
+}
+
+a:hover {
+    font-size: 36px;
+    font-family: Courier;
+    color: black;
+}
+
+li p {
+    font-size: 30px;
+}
+
+.fancy {
+    font-family: cursive;
+    color: violet;
+}
+
+#serious {
+    font-family: Courier;
+    color: #8c8c8c;
+}
+
+
+}

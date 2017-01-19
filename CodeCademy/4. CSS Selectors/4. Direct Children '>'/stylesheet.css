@@ -1,0 +1,43 @@
+/*Remember, you can reach an element that is a child of another element like this:
+
+div div p { Some CSS }
+
+where in this case, we'd be grabbing any <p> that is nested somewhere inside a <div> that is nested somewhere inside another <div>. If you want to grab direct children—that is, an element that is directly nested inside another element, with no elements in between—you can use the > symbol, like so:
+
+div > p { Some CSS }
+
+This only grabs <p>s that are nested directly inside of <div>s; it won't grab any paragraphs that are, say, nested inside lists that are in turn nested inside <div>s.*/
+
+
+/* Hint:
+What happens if you just set all <p> tags to have the font Garamond? Since nothing "downstream" of the cascade (that is, no other selector that's more specific than just p) changes the font-family, this should make all paragraphs have the same font!
+*/
+
+
+/* Instructions
+
+   Make all <p> tags have a font-family of Garamond. (Do NOT use the universal ("*") selector for this! There's a better way; see the Hint for help.)
+
+   Make the introduction paragraph and the summary paragraph have a font-weight of bold (this is a new property for you, but it works just like the others you've learned).
+
+   Make the synopsis paragraph have the color #7AC5CD.
+
+   Make the paragraphs in the unordered list have the color #000000 and text-decoration underline. */
+
+p {
+    font-family: Garamond, monospace, sans-serif, serif;
+}
+
+body>div>p {
+    font-weight: bold;
+    color: #7AC5CD;
+}
+
+body>p {
+    font-weight: bold;
+}
+
+ul p {
+    color: #000000;
+    text-decoration: underline;
+}

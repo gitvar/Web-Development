@@ -1,0 +1,13 @@
+/*
+target ONLY the <a>s that are children of <li>s and
+
+    Set their text-decoration to none
+    Set their font-family to cursive
+
+Don't change the link that's NOT part of the unordered list!
+*/
+
+li a {
+  text-decoration:none;
+  font-family: cursive;
+}

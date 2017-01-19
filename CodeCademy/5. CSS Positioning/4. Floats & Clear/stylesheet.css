@@ -1,0 +1,97 @@
+/* Floats & Clear */
+
+
+/*
+If you tell an element to clear: left, it will immediately move below any floating elements on the left side of the page; it can also clear elements on the right. If you tell it to clear: both, it will get out of the way of elements floating on the left and right!
+
+The syntax is what you're used to:
+
+element {
+    clear: right, left, or both
+}
+*/
+
+#header {
+    height: 50px;
+    background-color: orange;
+    margin-bottom: 10px;
+}
+
+.left {
+    height: 300px;
+    width: 150px;
+    background-color: blue;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.right {
+    height: 300px;
+    width: 450px;
+    background-color: pink;
+    float: right;
+    margin-bottom: 10px;
+}
+
+#footer {
+    height: 50px;
+    background-color: yellow;
+    clear: both;
+}
+
+div {
+    /*height: 100px;
+    width: 100px;*/
+    border-radius: 5px;
+    border: 4px solid black;
+    /*margin: 20px;*/
+}
+
+#outer {
+    height: 1500px;
+    width: 160px;
+    background-color: grey;
+    margin-left: 400px;
+    margin: 30px;
+    position: relative;
+}
+
+#inner {
+    height: 80px;
+    width: 80px;
+    background-color: green;
+    margin: 40px;
+    margin-left: 300px;
+    position: relative;
+}
+
+#div_1 {
+    height: 180px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: green;
+    margin: 30px;
+    float: left;
+}
+
+#div_2 {
+    height: 180px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: cyan;
+    margin: 30px;
+    float: left;
+    margin-left: 250px;
+}
+
+#div_3 {
+    height: 180px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: blue;
+    margin: 30px;
+    float: right;
+}

@@ -1,0 +1,8 @@
+/*ID Selector:
+
+IDs, on the other hand, are great for when you have exactly one element that should receive a certain kind of styling.*/
+
+#serious {
+    font-family: Courier;
+    color: #cc0000;
+}

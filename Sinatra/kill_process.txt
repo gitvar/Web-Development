@@ -1,0 +1,3 @@
+1. See which PID was allocated to the server in question.
+2. kill -9 PID
+3. Restart server: "ruby server_name.rb -p port_number"

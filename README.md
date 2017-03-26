@@ -1,1 +1,1 @@
-Launch School Web Development Folder
+Launch School Course Number 170: Web Development

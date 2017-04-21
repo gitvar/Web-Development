@@ -4,12 +4,11 @@ require "sinatra/reloader"
 require "tilt/erubis"
 
 get "/" do
-  # Find ONLY the filenames in the 'public' directory.
-  # No prepended directory names like 'public/demo1.html'.
-  # And no directory names (if there are directories in 'public').
-  @files = Dir.glob("public/*").map do |file|
-    File.basename(file) if File.ftype(file) == "file"
-  end.compact.sort
+  # Find all files in the public directory:
+  @files = Dir.glob("public/*").select { |file| File.ftype(file) == "file" }
+
+  # Remove prepended directory names:
+  @files.map! { |file| File.basename(file) }.sort
 
   @sort = params[:sort]
   @files.reverse! if params[:sort] == "desc"

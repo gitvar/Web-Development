@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= @title %></title>
+  </head>
+
+  <body>
+    <h1><%= @title %></h1>
+    <h2>by <%= @author %></h2>
+      <p></p>
+      <p>
+        <ol>
+          <% @contents.each do |chapter| %>
+            <li>
+              <a href="#"><%= chapter %><a/>
+            </li>
+          <% end %>
+        </ol>
+      </p>
+  </body>
+
+</html>

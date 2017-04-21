@@ -1,0 +1,31 @@
+<!-- views/list.erb -->
+<!doctype html>
+<html>
+  <head>
+    <title>Dynamic Directory Index</title>
+  </head>
+
+  <body>
+    <h2>Dynamic Directory Index</h2>
+    <div>
+      <ul>
+        <% @files.each do |file| %>
+        <li>
+          <a href="<%= file %>"><%= file %></a>
+        </li>
+        <% end %>
+      </ul>
+      <p>
+        The sort parameter =
+        <%= @sort %>
+      </p>
+      <p>
+        <% if params[:sort] == "desc" %>
+        <a href="/?sort=asc">Sort ascending</a>
+      <% else %>
+        <a href="/?sort=desc">Sort descending</a>
+        <% end %>
+      </p>
+    </div>
+  </body>
+</html>

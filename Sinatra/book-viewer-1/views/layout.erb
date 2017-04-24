@@ -2,14 +2,33 @@
 <html>
   <head>
     <title><%= @title %></title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/book_viewer.css">
   </head>
 
   <body>
-    <h1><%= @title %></h1>
-    <h2>by
-      <%= @author %></h2>
-    <p></p>
-    <%= yield %>
-  </body>
+    <div class="heading">
+        <h1><%= @title %></h1>
+        <h2>by <%= @author %></h2>
+    </div>
 
-</html>
+    <div class="column-layout">
+
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+          <% @contents.each_with_index do |chapter, index| %>
+          <li>
+            <a href="/chapters/<%= index + 1 %>"><%= chapter %><a/>
+          </li>
+          <% end %>
+        </ol>
+        </div>
+
+        <div class="main-column">
+          <%= yield %>
+        </div>
+
+      </div>
+    </body>
+
+  </html>

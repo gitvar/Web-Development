@@ -1,8 +1,8 @@
 <p>
   <ol>
-    <% @contents.each do |chapter| %>
+    <% @contents.each_with_index do |chapter, index| %>
     <li>
-      <a href="#"><%= chapter %><a/>
+      <a href="/chapters/<%= index + 1 %>"><%= chapter %><a/>
     </li>
     <% end %>
   </ol>

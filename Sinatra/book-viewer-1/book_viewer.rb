@@ -25,10 +25,12 @@ get "/" do
 end
 
 get "/chapters/:number" do
-  number = params[:number].to_i
-  redirect "/" if number < 1 || number > @contents.size
-  @chapter_title = @contents[number - 1]
-  @chapter = File.read("data/chp#{number}.txt")
+  chap_number = params[:number].to_i
+  no_of_chapters = @contents.size
+  redirect "/" unless (1..no_of_chapters).to_a.include?(chap_number)
+
+  @chapter_title = @contents[chap_number - 1]
+  @chapter = File.read("data/chp#{chap_number}.txt")
 
   erb :chapter
 end

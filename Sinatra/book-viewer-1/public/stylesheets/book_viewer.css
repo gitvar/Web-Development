@@ -22,19 +22,20 @@ h1, h2, h3 {
 
 /* Heading */
 
-.heading {
+.heading-container {
   background-color: #ccb9da;
-  max-width: 750px;
+  max-width: 700px;
   margin: 20px auto;
   padding: 20px 0 20px 0;
   text-align: center;
-  /*display: flex;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/*.heading-text {
-  text-align: center;
-}*/
+.heading-block {
+  flex: 1;
+}
 
 
 /*.form-row {
@@ -65,7 +66,7 @@ h1, h2, h3 {
 
 .main-column {
   margin: 10px 10px 0px 0px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 20px 5px 20px;
   background-color: #cdf1c3;
   flex: 3;
   order: 2;

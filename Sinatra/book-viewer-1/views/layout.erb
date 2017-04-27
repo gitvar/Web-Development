@@ -28,13 +28,16 @@
           </li>
           <% end %>
         </ol>
-        </div>
 
-        <div class="main-column">
-          <%= yield %>
-        </div>
-
+      <div class="search">
+          <a href="/search?query=">Search</a>
       </div>
-    </body>
+    </div>
 
-  </html>
+      <div class="main-column">
+        <%= yield %>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -79,3 +79,9 @@ h1, h2, h3 {
   flex: 1;
   order: 1;
 }
+
+.search {
+  padding: 0px 0px 10px 5px;
+  /*text-align: center;*/
+  /*justify-content: center;*/
+}

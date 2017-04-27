@@ -1,0 +1,27 @@
+<!-- views/search.erb -->
+<h2>Search</h2>
+<div>
+  <form action="/search" method="get">
+    <input name="query" value="<%= params[:query] %>"/>
+    <button type="submit">Search</button>
+  </form>
+
+  <% if params[:query] %>
+    <% if @results.empty? %>
+      <p>Sorry, no matches were found.</p>
+    <% else %>
+      <h2>Results for '<%= params[:query]%>'</h2>
+      <ol>
+        <% @results.each do |result| %>
+        <li>
+          <a href="/chapters/<%= result[:number] %>"><%= result[:name] %>
+          </a>
+        </li>
+        <% end %>
+      </ol>
+    <% end %>
+  <% end %>
+</div>
+<div>
+  <a href="#"></a>
+</div>

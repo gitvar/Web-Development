@@ -10,8 +10,11 @@ end
 
 helpers do
   def insert_paragraphs(text)
-    text.split("\n\n").map do |paragraph|
-      "<p>#{paragraph}</p>"
+    # text.split("\n\n").map do |paragraph|
+    #   "<p>#{paragraph}</p>"
+    # end.join
+    text.split("\n\n").each_with_index.map do |paragraph, index|
+      "<p id=paragraph#{index}>#{paragraph}</p>"
     end.join
   end
 end
@@ -40,8 +43,8 @@ end
 def each_chapter
   @contents.each_with_index do |name, index|
     number = index + 1
-    contents = File.read("data/chp#{number}.txt")
-    yield number, name, contents
+    chapter = File.read("data/chp#{number}.txt")
+    yield number, name, chapter
   end
 end
 
@@ -54,8 +57,12 @@ def chapters_matching(query)
 
   return results if query.nil? || query == ''
 
-  each_chapter do |number, name, contents|
-    results << { number: number, name: name } if contents.include?(query)
+  each_chapter do |number, name, chapter|
+    matches = {}
+    chapter.split("\n\n").each_with_index do |paragraph, index|
+      matches[index] = paragraph if paragraph.include?(query)
+    end
+    results << { number: number, name: name, paragraphs: matches } if matches.any?
   end
 
   results

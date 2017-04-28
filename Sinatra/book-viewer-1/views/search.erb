@@ -10,12 +10,23 @@
     <% if @results.empty? %>
       <p>Sorry, no matches were found.</p>
     <% else %>
+      <h2> </h2>
       <h2>Results for '<%= params[:query]%>'</h2>
       <ol>
         <% @results.each do |result| %>
+        <!--  If @results = [{:number => 3, :name => "A Case of Identity"}]-->
+        <!--  Thus, for @results[0], result[:number] = 3 and, -->
+        <!-- result[:name] = "A Case of Identity" -->
         <li>
-          <a href="/chapters/<%= result[:number] %>"><%= result[:name] %>
-          </a>
+          <h4><%= result[:name] %></h4>
+          <ol>
+            <% result[:paragraphs].each do |index, paragraph| %>
+            <li>
+              <a href="/chapters/<%= result[:number] %>#paragraph<%= index %>"><%= paragraph %>
+              </a>
+            </li>
+            <% end %>
+          </ol>
         </li>
         <% end %>
       </ol>

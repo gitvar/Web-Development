@@ -2,7 +2,11 @@
   <h3><%= @chapter_title %></h3>
 </div>
 <div>
-  <%= insert_paragraphs(@chapter) %>
+  <% if params[:query] %>
+    <%= insert_paragraphs(@chapter, params[:query]) %>
+  <% else %>
+    <%= insert_paragraphs(@chapter) %>
+  <% end %>
 </div>
 <div>
   <a href="#"></a>

@@ -8,15 +8,24 @@ before do
 end
 
 helpers do
+  def count_users
+    @users.keys.count
+  end
+
+  def count_interests
+    interests = []
+    @users.keys.each do |user|
+      interests << @users[user][:interests]
+    end
+    interests.flatten.count
+  end
 end
 
 not_found do
-  puts "Not Found"
   redirect "/users"
 end
 
 get "/users" do
-  puts "/users"
 
   erb :users
 end
@@ -31,6 +40,5 @@ get "/:user_name" do
 end
 
 get "/" do
-  puts "/"
   redirect "/users"
 end

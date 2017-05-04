@@ -8,5 +8,16 @@
   <%= @interests.join(', ') %>
 </p>
 <p>
-  
+  <h2>Other Users</h2>
+  <ol>
+    <% @users.keys.each do |user_name| %>
+      <% next if user_name == @user_name # These are symbols! %>
+      <li>
+        <a href="/<%= user_name %>"><%= user_name %></a>
+      </li>
+    <% end %>
+  </ol>
+</p>
+<p>
+  <a href="/"><h4>Back to main page</h4></a>
 </p>

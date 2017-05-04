@@ -17,3 +17,15 @@
   - politics
   - history
   - birding
+:john:
+  :email: john@hotmail.com
+  :interests:
+  - tennis
+  - cricket
+  - handball
+:mike:
+  :email: mike@hotmail.com
+  :interests:
+  - badmington
+  - cricket
+  - rugby

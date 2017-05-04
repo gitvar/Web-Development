@@ -1,6 +1,12 @@
 <!-- views/layout.erb -->
 <html>
   <body>
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
+    <div>
+      <h3>Stats</h3>
+      There are <%= count_users %> users, with a total of <%= count_interests %> interests.
+    </div>
   </body>
 </html>

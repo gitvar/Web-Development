@@ -11,12 +11,8 @@ end
 helpers do
   def insert_paragraphs(chapter, query = "")
     chapter.split("\n\n").each_with_index.map do |paragraph, index|
-      if query == ""
-        "<p id=paragraph#{index}>#{paragraph}</p>"
-      else
-        paragraph = highlight(paragraph, query)
-        "<p id=paragraph#{index}>#{paragraph}</p>"
-      end
+      paragraph = highlight(paragraph, query) unless query == ""
+      "<p id=paragraph#{index}>#{paragraph}</p>"
     end.join
   end
 

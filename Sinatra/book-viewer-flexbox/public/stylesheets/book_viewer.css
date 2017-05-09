@@ -64,6 +64,12 @@ h1, h2, h3 {
   display: flex;
 }
 
+.toc-heading {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .main-column {
   margin: 10px 10px 0px 0px;
   padding: 5px 20px 5px 20px;
